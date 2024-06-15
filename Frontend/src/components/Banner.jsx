@@ -1,7 +1,15 @@
 import React from 'react';
 import banner from "../../public/banner.jpg"
+import { useNavigate } from "react-router-dom";
 
 function Banner() {
+    
+    const navigate = useNavigate()
+
+    const gotToNewPage=()=>{
+      navigate("/about");
+    }
+    
     return (
         <>
             <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10' >
@@ -18,7 +26,7 @@ function Banner() {
                         </label>
 
                     </div>
-                    <button className="btn btn-secondary mt-6">Submit</button>
+                    <button onClick={() => gotToNewPage()} className="btn btn-secondary mt-6">Get Started</button>
 
                 </div>
 
