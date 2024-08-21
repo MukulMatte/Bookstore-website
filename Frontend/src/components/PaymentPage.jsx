@@ -60,7 +60,7 @@ function PaymentPage() {
             book_title : data.book_title
 
         }
-        await axios.post("http://localhost:4001/payment/payment", paymentinfo)
+        await axios.post("https://bookstore-websitebackend.onrender.com/payment/payment", paymentinfo)
         .then((res)=>{
             console.log(res.data);
             if(res.data){
